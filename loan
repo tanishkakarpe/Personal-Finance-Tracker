@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan EMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+
+      
+    </style>
+</head>
+<body>
+    <header>Loan EMI Calculator</header>
+    
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+        </div>
+        <div class="main-content">
+          
+            <form id="loanForm">
+                <label for="loanType">Loan Type:</label>
+                <select id="loanType" multiple required>
+                    <option value="house">House Loan</option>
+                    <option value="vehicle">Vehicle Loan</option>
+                    <option value="personal">Personal Loan</option>
+                </select>
+
+                <div id="loanDetails">
+                    <label for="loanAmount">Loan Amount:</label>
+                    <input type="number" id="loanAmount" required><br>
+
+                    <label for="interestRate">Interest Rate (%):</label>
+                    <input type="number" id="interestRate" required><br>
+
+                    <label for="loanTerm">Loan Term (years):</label>
+                    <input type="number" id="loanTerm" required>
+                </div>
+
+                <button type="submit">Calculate EMI</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <script src="script5.js"></script>
+</body>
+</html>
