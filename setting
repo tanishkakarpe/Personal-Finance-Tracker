@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Settings</title>
+</head>
+<body>
+    <header>Finance Manager</header>
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+            
+        </div>
+        <div class="main-content">
+            <h2 class="h">Settings</h2>
+            <form id="settings-form">
+                <label for="theme">Theme</label>
+                <select id="theme" name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+
+                <label for="notifications">Notifications</label>
+                <select id="notifications" name="notifications">
+                    <option value="on">On</option>
+                    <option value="off">Off</option>
+                </select>
+
+                <button type="submit">Save Settings</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
