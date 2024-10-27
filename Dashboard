@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Finance Management</title>
+</head>
+<body>
+    <header>Finance Manager</header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+        </div>
+
+        <div class="main-content">
+            <div class="header">Personal Finance Tracker</div>
+            <div class="card">
+                <h3>Current Balance</h3>
+                <div class="value">$108,000.00</div>
+            </div>
+            <div class="card">
+                <h3>This Month's Income</h3>
+                <div class="value">$49,000.00</div>
+            </div>
+            <div class="card">
+                <h3>This Month's Expenses</h3>
+                <div class="value">$21,000.00</div>
+            </div>
+
+            <h2 class="h"> Balance and Liabilities</h2>
+            <!-- Placeholder for a chart -->
+            <div class="chart-placeholder"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
