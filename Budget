@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget - Personal Finance</title>
+</head>
+<body>
+    <header>Finance Manager</header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+        </div>
+
+        <div class="main-content">
+            <div class="header">Manage Budget</div>
+
+            <form id="budget-form">
+                <label for="category">Budget Category</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="amount">Budget Amount</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <button type="submit">Set Budget</button>
+            </form>
+
+            <h2 class="h">Budget List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Budget Amount</th>
+                        <th>Date Set</th>
+                    </tr>
+                </thead>
+                <tbody id="budget-list">
+                    <!-- Dynamic rows will be inserted here -->
+                </tbody>
+            </table>
+            <div>Total Budget: <span id="total-budget">$0.00</span></div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
