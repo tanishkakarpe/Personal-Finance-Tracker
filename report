@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reports - Personal Finance</title>
+</head>
+
+<body>
+    <header>Finance Manager</header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+        </div>
+        <div class="main-content">
+            <h1 class="header">Dashboard Overview</h1>
+
+            <div class="progress-wrapper">
+                <div class="progress-card">
+                    <h3>Income</h3>
+                    <div class="circle">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                            <circle class="circle-progress" cx="40" cy="40" r="30" stroke-dasharray="188.4" stroke-dashoffset="94.2"></circle>
+                        </svg>
+                    </div>
+                    <div class="value" id="income-percentage"></div>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Expenses</h3>
+                    <div class="circle">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                            <circle class="circle-progress" cx="40" cy="40" r="30" stroke-dasharray="188.4" stroke-dashoffset="113.04"></circle>
+                        </svg>
+                    </div>
+                    <div class="value" id="expense-percentage"></div>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Investments</h3>
+                    <div class="circle">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                            <circle class="circle-progress" cx="40" cy="40" r="30" stroke-dasharray="188.4" stroke-dashoffset="113.04"></circle>
+                        </svg>
+                    </div>
+                    <div class="value" id="investment-percentage"></div>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Loan</h3>
+                    <div class="circle">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                            <circle class="circle-progress" cx="40" cy="40" r="30" stroke-dasharray="188.4" stroke-dashoffset="113.04"></circle>
+                        </svg>
+                    </div>
+                    <div class="value" id="loan-percentage"></div>
+                </div>
+
+                <div class="progress-card">
+                    <h3>Budget</h3>
+                    <div class="circle">
+                        <svg width="80" height="80">
+                            <circle class="circle-bg" cx="40" cy="40" r="30"></circle>
+                            <circle class="circle-progress" cx="40" cy="40" r="30" stroke-dasharray="188.4" stroke-dashoffset="56.52"></circle>
+                        </svg>
+                    </div>
+                    <div class="value" id="budget-percentage"></div>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="header">Financial Reports</div>
+
+                <div class="card">
+                    <h3>Total Income</h3>
+                    <p class="value" id="total-income">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Expenses</h3>
+                    <p class="value" id="total-expenses">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Investments</h3>
+                    <p class="value" id="total-investments">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Loans</h3>
+                    <p class="value" id="total-loans">$0.00</p>
+                </div>
+
+                <div class="card">
+                    <h3>Remaining Budget</h3>
+                    <p class="value" id="remaining-budget">$0.00</p>
+                </div>
+
+                <h2>View Reports</h2>
+                <select id="time-frame">
+                    <option value="all">All Time</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+
+                <button id="apply-filter">Apply Filter</button>
+
+                <h2 class="h">Report Summary</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Total Amount</th>
+                            <th>Type (Income/Expense/Investment/Loan)</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="report-list">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
