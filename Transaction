@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Transaction History</title>
+</head>
+<body>
+    <header>Finance Manager</header>
+    <div class="container">
+        <div class="sidebar">
+            <a href="userprofile.html">Profile</a>
+            <a href="settings.html">Settings</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="incomes.html">Incomes</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="budget.html">Budget</a>
+            <a href="investment.html">Investment</a>
+            <a href="loan.html">Loan</a>
+            <a href="transactionhistory.html">Transaction-History</a>
+            <a href="upireport.html">UPI-Transaction</a>
+            <a href="reports.html">Reports</a>
+               </div>
+        <div class="main-content">
+            <h2 class="h">Transaction History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Category</th>
+                        <th>Type</th> <!-- Income or Expense -->
+                    </tr>
+                </thead>
+                <tbody id="transaction-history">
+                    <!-- Transactions will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
