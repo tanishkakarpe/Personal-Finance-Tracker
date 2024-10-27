@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+        <header>Investment Guide</header>
+            <nav class="side"> 
+            <ul>
+                <a href="#introduction">Introduction</a>
+                <a href="#options">Investment Options</a>
+                <a href="#how-to-invest">How Much to Invest</a>
+                <a href="#resources">Tools & Resources</a>
+                <a href="#conclusion">Conclusion</a>
+            </ul>
+            </nav>
+      
+            <div class="container">
+                <div class="sidebar">
+                    <a href="userprofile.html">Profile</a>
+                    <a href="settings.html">Settings</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="incomes.html">Incomes</a>
+                    <a href="expenses.html">Expenses</a>
+                    <a href="budget.html">Budget</a>
+                    <a href="investment.html">Investment</a>
+                    <a href="loan.html">Loan</a>
+                    <a href="transactionhistory.html">Transaction-History</a>
+                    <a href="upireport.html">UPI-Transaction</a>
+                    <a href="reports.html">Reports</a>
+                </div>
+        
+       
+        <div class="main-content">
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Investment is crucial for financial growth. This guide helps you understand where and how much to invest.</p>
+        </section>
+
+        <section id="options">
+            <h2>Investment Options</h2>
+            <ul>
+                <li><strong>Stocks:</strong> 40% of total investment.</li>
+                <li><strong>Bonds:</strong> 30% of total investment.</li>
+                <li><strong>Mutual Funds/ETFs:</strong> 20% of total investment.</li>
+                <li><strong>Real Estate:</strong> 10% of total investment.</li>
+                <li><strong>Cryptocurrency:</strong> 5% of total investment.</li>
+            </ul>
+            <h3>Calculate Your Investment Allocation</h3>
+            <label for="totalInvestment">Enter Total Investment Amount:</label>
+            <input type="number" id="totalInvestment" placeholder="e.g. 10000" />
+            <button onclick="calculateAllocations()">Calculate</button>
+
+            <div id="results" style="margin-top: 20px;"></div>
+        </section>
+
+        <section id="how-to-invest">
+            <h2>How Much to Invest</h2>
+            <p>Consider your initial capital, risk tolerance, and investment horizon before deciding how much to invest.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Tools & Resources</h2>
+            <p>Use investment calculators and access research resources to make informed decisions.</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Summarize your investment strategy and consult a financial advisor for personalized advice.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Investment Management Guide</p>
+    </footer>
+</div>
+</div>
+
+    <script src="script4.js"></script>
+</body>
+</html>
