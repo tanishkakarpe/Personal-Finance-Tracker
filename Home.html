@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    background-color: #2C3E50;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav .logo-text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #18BC9C;
+    border-radius: 5px;
+}
+
+/* Home Section */
+.home-content {
+    background: url('banner-bg.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.home-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.home-banner p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.btn-start {
+    background-color: #18BC9C;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-start a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-start:hover {
+    background-color: #16A085;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.feature {
+    width: 22%;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+    font-size: 1.8rem;
+    color: #18BC9C;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer h3 {
+    color: #18BC9C;
+    font-size: 1.5rem;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Home Section -->
+    <section class="home-content">
+        <div class="home-banner">
+            <h1>Welcome to Finance Tracker</h1>
+            <p>Manage your finances with ease and control. Plan your expenses, track your savings, and achieve financial freedom.</p>
+            <button class="btn-start"><a href="signup.html">Get Started Now</a></button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h2>Track Expenses</h2>
+            <p>Stay on top of your spending habits by tracking your daily expenses easily.</p>
+        </div>
+        <div class="feature">
+            <h2>Budget Planner</h2>
+            <p>Create budgets for specific goals and get alerts when you're about to exceed them.</p>
+        </div>
+        <div class="feature">
+            <h2>Investment Insights</h2>
+            <p>Get insights on how to grow your wealth through personalized investment recommendations.</p>
+        </div>
+        <div class="feature">
+            <h2>Secure Platform</h2>
+            <p>All your financial data is encrypted and safely stored, ensuring maximum privacy.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Finance Tracker</h3>
+                    <p>Finance Tracker is your go-to platform for managing your personal finances. Track expenses, set budgets,
+                        and get insights tailored to your financial goals.</p>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Expenses</a></li>
+                        <li><a href="#">Budgets</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: support@financetracker.com</p>
+                    <p>Phone: +123 456 7890</p>
+                    <p>Address: 123 Finance Blvd, Suite 789, Moneyville</p>
+                </div>
+           
