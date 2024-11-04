@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .warning {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" onclick="navigateTo('home')">Expense Management</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('login')">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="navigateTo('register')">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page">
+    <div class="container">
+      <h1>Home Page</h1>
+      <p>Welcome to the Home Page!</p>
+    </div>
+  </div>
+
+  <!-- Register Page -->
+  <div id="register" class="page">
+    <div class="container">
+      <h1>Register Form</h1>
+      <form onsubmit="submitRegister(); return false;">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="registerName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="registerEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="registerPassword" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <div id="registerWarning" class="warning"></div>
+      </form>
+      <a href="#" onclick="navigateTo('login')">Already registered? Login here.</a>
+    </div>
+  </div>
+
+  <!-- Login Page -->
+  <div id="login" class="page">
+    <div class="container">
+      <h1>Login Form</h1>
+      <form onsubmit="submitLogin(); return false;">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="loginEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="loginPassword" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div id="loginWarning" class="warning"></div>
+      </form>
+      <a href="#" onclick="navigateTo('register')">Not a user? Register here.</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light p-4 text-center">
+    All rights reserved &copy; techinfoyt
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Simulate page routing by showing and hiding sections
+    function navigateTo(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+
+      // Protect home page: redirect to login if not logged in
+      if (page === 'home' && !localStorage.getItem('user')) {
+        document.getElementById('loginWarning').innerText = 'Please login to access the home page.';
+        navigateTo('login');
+      }
+    }
+
+    // Register form submission
+    function submitRegister() {
+      const name = document.getElementById('registerName').value;
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+
+      const registerWarning = document.getElementById('registerWarning');
+
+      if (name && email && password) {
+        localStorage.setItem('user', JSON.stringify({ name, email, password }));
+        registerWarning.innerText = ''; // Clear any previous warning
+        navigateTo('login');
+      } else {
+        registerWarning.innerText = 'Please fill out all fields.';
+      }
+    }
+
+    // Login form submission
+    function submitLogin() {
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+      const user = JSON.parse(localStorage.getItem('user'));
+
+      const loginWarning = document.getElementById('loginWarning');
+
+      if (user && email === user.email && password === user.password) {
+        loginWarning.innerText = ''; // Clear any previous warning
+        navigateTo('home');
+      } else {
+        loginWarning.innerText = 'Invalid credentials. Please try again.';
+      }
+    }
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem('user');
+      navigateTo('login');
+    }
+
+    // On page load, show the login page by default
+    window.onload = () => {
+      navigateTo('login');
+    };
+  </script>
+
+  <!-- Optional JavaScript (Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
