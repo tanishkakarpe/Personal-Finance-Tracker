@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .warning {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Register Page -->
+  <div id="register" class="page active">
+    <div class="container">
+      <h1>Register Form</h1>
+      <form onsubmit="submitRegister(); return false;">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="registerName" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="registerEmail" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="registerPassword" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <div id="registerWarning" class="warning"></div>
+      </form>
+      <a href="login.html">Already registered? Login here.</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light p-4 text-center">
+    All rights reserved &copy; techinfoyt
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Register form submission
+    function submitRegister() {
+      const name = document.getElementById('registerName').value;
+      const email = document.getElementById('registerEmail').value;
+      const password = document.getElementById('registerPassword').value;
+
+      const registerWarning = document.getElementById('registerWarning');
+
+      if (name && email && password) {
+        localStorage.setItem('user', JSON.stringify({ name, email, password }));
+        registerWarning.innerText = ''; // Clear any previous warning
+        window.location.href = 'login.html'; // Redirect to login page
+      } else {
+        registerWarning.innerText = 'Please fill out all fields.';
+      }
+    }
+  </script>
+
+  <!-- Optional JavaScript (Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
